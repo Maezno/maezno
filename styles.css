@@ -125,6 +125,9 @@ h3 { font-size: 1.3rem; letter-spacing: -.01em; line-height: 1.3; }
 .fixed i { background: linear-gradient(135deg, var(--accent-2), var(--accent)); }
 .fixed b { border: 2px solid var(--ok); color: var(--ok); }
 
+.qr { text-align: center; }
+.qr svg { display: block; width: min(190px, 70%); margin: 0 auto; border-radius: 10px; }
+
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px; }
 .card {
   display: flex; flex-direction: column; align-items: flex-start;
@@ -134,7 +137,11 @@ h3 { font-size: 1.3rem; letter-spacing: -.01em; line-height: 1.3; }
 .card:hover { transform: translateY(-4px); border-color: var(--accent); }
 .card h3 { display: flex; align-items: center; gap: 10px; margin: 8px 0 10px; }
 .card > p:not(.kind) { color: var(--muted); font-size: .97rem; }
-.card .tags { margin-top: auto; padding-top: 18px; margin-bottom: 14px; }
+.card > p.status {
+  margin-top: auto; align-self: flex-start; color: var(--warn); font-size: .8rem; font-weight: 600;
+  border: 1px solid currentColor; border-radius: 999px; padding: 2px 12px;
+}
+.card > p:nth-of-type(2) { margin-bottom: 18px; }
 
 .stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px; }
 .stack div { border-top: 2px solid var(--accent); padding-top: 16px; }

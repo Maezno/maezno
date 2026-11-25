@@ -28,6 +28,7 @@
       <a class="brand" href="#">maezno<span>.</span></a>
       <nav aria-label="Principal">
         <a href="#proyectos">Proyectos</a>
+        <a href="#en-proceso">En proceso</a>
         <a href="#stack">Stack</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -41,7 +42,7 @@
     <section class="hero wrap">
       <p class="eyebrow">Desarrollo de software</p>
       <h1>Hago apps para <em>Android</em>, <em>Windows</em> y la <em>web</em>.</h1>
-      <p class="lead">Herramientas que resuelven problemas concretos: ordenar archivos en la red, rescatar videos dañados o dejar fluido un TV box modesto.</p>
+      <p class="lead">Herramientas que resuelven problemas concretos: ordenar archivos en la red, comprimir videos o rescatar grabaciones dañadas.</p>
       <div class="actions">
         <a class="btn primary" href="#proyectos">Ver proyectos</a>
         <a class="btn" href="https://play.google.com/store/apps/details?id=icon.maezno.com&amp;hl=es">Google Play</a>
@@ -50,6 +51,52 @@
 
     <section id="proyectos" class="wrap">
       <h2>Proyectos destacados</h2>
+
+      <article class="feature">
+        <div class="feature-text">
+          <div class="title-row">
+            <img src="assets/qubit.png" alt="" width="56" height="56">
+            <div>
+              <h3>Qubit Explorer</h3>
+              <p class="kind">App Android</p>
+            </div>
+          </div>
+          <p>Explorador de archivos que trabaja igual con el almacenamiento del teléfono y con carpetas compartidas en la red local.</p>
+          <ul class="points">
+            <li>Conexión a servidores SMB y FTP</li>
+            <li>Búsqueda por tipo, orientación y tamaño, y limpieza de duplicados</li>
+            <li>Visores de PDF y documentos, editor de texto y archivos comprimidos</li>
+          </ul>
+          <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>SMB / FTP</li></ul>
+        </div>
+        <div class="phones">
+          <img src="assets/qubit-explorador.webp" alt="Explorador de archivos de Qubit Explorer" width="540" height="1020" loading="lazy">
+          <img src="assets/qubit-buscador.webp" alt="Buscador de Qubit Explorer" width="540" height="1020" loading="lazy">
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <div class="title-row">
+            <img src="assets/vidforge.png" alt="" width="56" height="56">
+            <div>
+              <h3>VidForge</h3>
+              <p class="kind">App Android</p>
+            </div>
+          </div>
+          <p>Comprime, convierte y revisa los videos del teléfono, sin pasarlos a una computadora.</p>
+          <ul class="points">
+            <li>Conversión a H.264 y H.265 con perfiles listos o ajustes avanzados</li>
+            <li>Recorte de fragmentos y cola de conversión por lotes</li>
+            <li>Detección de videos pesados, dañados y duplicados</li>
+          </ul>
+          <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>FFmpeg</li></ul>
+        </div>
+        <div class="phones">
+          <img src="assets/vidforge-convertir.webp" alt="Ajustes de conversión de VidForge" width="540" height="810" loading="lazy">
+          <img src="assets/vidforge-inspector.webp" alt="Búsqueda de videos pesados en VidForge" width="540" height="810" loading="lazy">
+        </div>
+      </article>
 
       <article class="feature">
         <div class="feature-text">
@@ -76,29 +123,6 @@
       <article class="feature">
         <div class="feature-text">
           <div class="title-row">
-            <img src="assets/filemanager.png" alt="" width="56" height="56">
-            <div>
-              <h3>FileManager Studio</h3>
-              <p class="kind">App Android</p>
-            </div>
-          </div>
-          <p>Explorador de archivos que trabaja igual con el almacenamiento del teléfono y con carpetas compartidas en la red local.</p>
-          <ul class="points">
-            <li>Conexión a servidores SMB y FTP, con escaneo de la red Wi-Fi</li>
-            <li>Buscador por categoría, orientación, fecha y tamaño</li>
-            <li>Detección de archivos duplicados</li>
-          </ul>
-          <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>SMB / FTP</li></ul>
-                  </div>
-        <div class="phones">
-          <img src="assets/fm-explorador.webp" alt="Pantalla del explorador de archivos de FileManager Studio" width="540" height="1125" loading="lazy">
-          <img src="assets/fm-buscador.webp" alt="Pantalla del buscador avanzado de FileManager Studio" width="540" height="1125" loading="lazy">
-        </div>
-      </article>
-
-      <article class="feature">
-        <div class="feature-text">
-          <div class="title-row">
             <img src="assets/mediarecovery.png" alt="" width="56" height="56">
             <div>
               <h3>MediaRecovery Studio</h3>
@@ -109,9 +133,9 @@
           <ul class="points">
             <li>Reconstrucción de archivos <code>.mov</code> sin índice <code>moov</code></li>
             <li>Conversión con aceleración por GPU (Nvidia / AMD) o CPU</li>
-            <li>Descargas web, detección de videos rotos y duplicados</li>
+            <li>Detección de videos rotos, pesados y duplicados</li>
           </ul>
-          <ul class="tags"><li>C#</li><li>WPF</li><li>FFmpeg</li><li>yt-dlp</li></ul>
+          <ul class="tags"><li>C#</li><li>WPF</li><li>FFmpeg</li></ul>
         </div>
         <div class="diagram" role="img" aria-label="Esquema de recuperación: un archivo MOV sin índice se escanea cuadro por cuadro y se reconstruye">
           <p class="d-label">grabacion.mov — sin índice</p>
@@ -122,59 +146,82 @@
           <p class="d-label">recuperado.mov — reproducible</p>
         </div>
       </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <div class="title-row">
+            <div>
+              <h3>Generador de QR</h3>
+              <p class="kind">Escritorio para Windows</p>
+            </div>
+          </div>
+          <p>Utilidad simple y directa: se escribe un texto o un enlace y se obtiene su código QR.</p>
+          <ul class="points">
+            <li>Vista previa del código en la misma ventana</li>
+            <li>Exportación como imagen PNG</li>
+          </ul>
+          <ul class="tags"><li>C#</li><li>WPF</li><li>QRCoder</li></ul>
+        </div>
+        <div class="diagram qr" role="img" aria-label="Ilustración: un texto se convierte en un código QR">
+          <p class="d-label">Texto o enlace</p>
+          <p class="d-step">↓</p>
+          <svg viewBox="-2 -2 25 25" shape-rendering="crispEdges" aria-hidden="true"><rect x="-2" y="-2" width="25" height="25" fill="#fff"/><path fill="#0d0f14" fill-rule="evenodd" d="M8 0h1v1h-1zM9 0h1v1h-1zM11 0h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM11 1h1v1h-1zM12 1h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM12 2h1v1h-1zM8 3h1v1h-1zM12 3h1v1h-1zM9 4h1v1h-1zM11 4h1v1h-1zM12 4h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM11 5h1v1h-1zM9 6h1v1h-1zM11 6h1v1h-1zM12 6h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1zM11 7h1v1h-1zM0 8h1v1h-1zM1 8h1v1h-1zM4 8h1v1h-1zM9 8h1v1h-1zM11 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM0 9h1v1h-1zM4 9h1v1h-1zM7 9h1v1h-1zM9 9h1v1h-1zM14 9h1v1h-1zM15 9h1v1h-1zM17 9h1v1h-1zM18 9h1v1h-1zM19 9h1v1h-1zM20 9h1v1h-1zM0 10h1v1h-1zM2 10h1v1h-1zM3 10h1v1h-1zM4 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM12 10h1v1h-1zM13 10h1v1h-1zM14 10h1v1h-1zM17 10h1v1h-1zM18 10h1v1h-1zM19 10h1v1h-1zM20 10h1v1h-1zM2 11h1v1h-1zM3 11h1v1h-1zM4 11h1v1h-1zM5 11h1v1h-1zM12 11h1v1h-1zM17 11h1v1h-1zM18 11h1v1h-1zM19 11h1v1h-1zM0 12h1v1h-1zM1 12h1v1h-1zM2 12h1v1h-1zM3 12h1v1h-1zM4 12h1v1h-1zM5 12h1v1h-1zM6 12h1v1h-1zM7 12h1v1h-1zM8 12h1v1h-1zM9 12h1v1h-1zM10 12h1v1h-1zM13 12h1v1h-1zM14 12h1v1h-1zM15 12h1v1h-1zM16 12h1v1h-1zM17 12h1v1h-1zM20 12h1v1h-1zM9 13h1v1h-1zM10 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM14 13h1v1h-1zM15 13h1v1h-1zM18 13h1v1h-1zM20 13h1v1h-1zM12 14h1v1h-1zM13 14h1v1h-1zM14 14h1v1h-1zM18 14h1v1h-1zM19 14h1v1h-1zM13 15h1v1h-1zM15 15h1v1h-1zM16 15h1v1h-1zM17 15h1v1h-1zM18 15h1v1h-1zM19 15h1v1h-1zM9 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM8 17h1v1h-1zM11 17h1v1h-1zM16 17h1v1h-1zM17 17h1v1h-1zM19 17h1v1h-1zM9 18h1v1h-1zM10 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM18 18h1v1h-1zM9 19h1v1h-1zM11 19h1v1h-1zM12 19h1v1h-1zM17 19h1v1h-1zM20 19h1v1h-1zM8 20h1v1h-1zM9 20h1v1h-1zM10 20h1v1h-1zM12 20h1v1h-1zM13 20h1v1h-1zM14 20h1v1h-1zM16 20h1v1h-1zM17 20h1v1h-1zM20 20h1v1h-1zM0 0h7v7h-7zM1 1v5h5v-5zM2 2h3v3h-3zM14 0h7v7h-7zM15 1v5h5v-5zM16 2h3v3h-3zM0 14h7v7h-7zM1 15v5h5v-5zM2 16h3v3h-3z"/></svg>
+          <p class="d-step">↓</p>
+          <p class="d-label">codigo.png</p>
+        </div>
+      </article>
     </section>
 
-    <section class="wrap">
-      <h2>Más trabajos</h2>
+    <section id="en-proceso" class="wrap">
+      <h2>En proceso</h2>
       <div class="grid">
         <article class="card">
-          <p class="kind">Web app · PWA</p>
-          <h3>Reportes urbanos</h3>
-          <p>Reportes anónimos de problemas de la ciudad con foto y GPS. Incluye panel de gestión con mapa de calor, estados y exportación a Excel, CSV y GeoJSON.</p>
-          <ul class="tags"><li>React</li><li>TypeScript</li><li>Supabase</li><li>Leaflet</li></ul>
+          <p class="kind">Android TV</p>
+          <h3>AeroLaunch</h3>
+          <p>Launcher liviano para TV box y Android TV.</p>
+          <p class="status">En proceso</p>
         </article>
 
         <article class="card">
-          <p class="kind">Android</p>
-          <h3>MediaRecovery Mobile</h3>
-          <p>La versión para el teléfono: descarga, compresión con aceleración por hardware, inspección y reparación de videos. En desarrollo.</p>
-          <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Media3</li></ul>
+          <p class="kind">Escritorio para Windows</p>
+          <h3>SimilarSearch</h3>
+          <p>Búsqueda local de fotos por similitud, objetos, texto y rostros.</p>
+          <p class="status">En proceso</p>
+        </article>
+
+        <article class="card">
+          <p class="kind">Escritorio y web</p>
+          <h3>GeoLens</h3>
+          <p>Mapa de relevamientos fotográficos con coordenadas GPS.</p>
+          <p class="status">En proceso</p>
+        </article>
+
+        <article class="card">
+          <p class="kind">Web app</p>
+          <h3>Reportes urbanos</h3>
+          <p>Reportes de problemas de la ciudad con foto y ubicación, y panel de gestión.</p>
+          <p class="status">En proceso</p>
+        </article>
+
+        <article class="card">
+          <p class="kind">Plataforma web</p>
+          <h3>Invitaciones digitales</h3>
+          <p>Invitaciones interactivas con confirmación de asistencia.</p>
+          <p class="status">En proceso</p>
         </article>
 
         <article class="card">
           <p class="kind">Streaming</p>
           <h3>Marcador para OBS</h3>
-          <p>Overlay de fútbol en 1080p que se maneja desde el celular: goles, reloj, tiempo agregado y equipos.</p>
-          <ul class="tags"><li>Node.js</li><li>HTML</li><li>OBS</li></ul>
-        </article>
-
-        <article class="card">
-          <p class="kind">Android TV</p>
-          <h3>TV Launcher</h3>
-          <p>Launcher liviano para TV box y Android TV, pensado para andar fluido incluso con 2 GB de RAM. Favoritas, apps ocultas y orden por uso.</p>
-          <ul class="tags"><li>Kotlin</li><li>D-pad</li><li>v0.1.0</li></ul>
-                  </article>
-
-        <article class="card">
-          <p class="kind">Plataforma web</p>
-          <h3>Invitaciones digitales</h3>
-          <p>Motor de invitaciones interactivas para múltiples eventos, con grupos de invitados, confirmaciones y datos aislados por evento.</p>
-          <ul class="tags"><li>TypeScript</li><li>Next.js</li><li>Supabase</li></ul>
+          <p>Marcador de fútbol en pantalla, controlado desde el celular.</p>
+          <p class="status">En proceso</p>
         </article>
 
         <article class="card">
           <p class="kind">Sitio web</p>
           <h3>Directorio de Emprendedores</h3>
-          <p>Guía online para encontrar emprendimientos, adaptada a celular y escritorio.</p>
-          <ul class="tags"><li>HTML</li><li>CSS</li><li>JSON</li></ul>
-          <a class="more" href="https://maezno.github.io/Directorio-Emprendedores/">Visitar sitio</a>
-        </article>
-
-        <article class="card">
-          <p class="kind">Escritorio para Windows</p>
-          <h3>Generador de QR</h3>
-          <p>Utilidad simple para crear códigos QR a partir de un texto y guardarlos como imagen PNG.</p>
-          <ul class="tags"><li>C#</li><li>WPF</li><li>QRCoder</li></ul>
+          <p>Guía online para encontrar emprendimientos.</p>
+          <p class="status">En proceso</p>
         </article>
       </div>
     </section>
