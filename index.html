@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maezno — Apps para Android, Windows y web</title>
+  <meta name="description" content="Portfolio de Maezno: aplicaciones para Android y Android TV, herramientas de escritorio para Windows y proyectos web.">
+  <meta property="og:title" content="Maezno — Portfolio">
+  <meta property="og:description" content="Apps para Android, Windows y web.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maezno.github.io/maezno/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('tema'); } catch (e) {}
+      if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="brand" href="#">maezno<span>.</span></a>
+      <nav aria-label="Principal">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#stack">Stack</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button id="tema" class="theme-btn" type="button" aria-label="Cambiar entre tema claro y oscuro">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero wrap">
+      <p class="eyebrow">Desarrollo de software</p>
+      <h1>Hago apps para <em>Android</em>, <em>Windows</em> y la <em>web</em>.</h1>
+      <p class="lead">Herramientas que resuelven problemas concretos: ordenar archivos en la red, rescatar videos dañados o dejar fluido un TV box modesto.</p>
+      <div class="actions">
+        <a class="btn primary" href="#proyectos">Ver proyectos</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=icon.maezno.com&amp;hl=es">Google Play</a>
+      </div>
+    </section>
+
+    <section id="proyectos" class="wrap">
+      <h2>Proyectos destacados</h2>
+
+      <article class="feature">
+        <div class="feature-text">
+          <p class="kind">Publicada en Google Play</p>
+          <h3>Notsquare HD — Icon Pack</h3>
+          <p>Paquete de íconos para unificar el estilo de todo el dispositivo. Se aplica desde el selector de íconos del launcher.</p>
+          <ul class="points">
+            <li>325 íconos en alta definición (192 × 192)</li>
+            <li>Compatible con teléfonos y tablets</li>
+          </ul>
+          <ul class="tags"><li>Android</li><li>Icon pack</li><li>Diseño</li></ul>
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=icon.maezno.com&amp;hl=es">Ver en Google Play</a>
+        </div>
+        <div>
+          <dl class="metrics">
+            <div><dt>Descargas</dt><dd>10 mil+</dd></div>
+            <div><dt>Calificación</dt><dd>5,0 ★</dd></div>
+            <div><dt>Reseñas</dt><dd>260</dd></div>
+          </dl>
+          <p class="note">Datos de Google Play, noviembre de 2026.</p>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <div class="title-row">
+            <img src="assets/filemanager.png" alt="" width="56" height="56">
+            <div>
+              <h3>FileManager Studio</h3>
+              <p class="kind">App Android</p>
+            </div>
+          </div>
+          <p>Explorador de archivos que trabaja igual con el almacenamiento del teléfono y con carpetas compartidas en la red local.</p>
+          <ul class="points">
+            <li>Conexión a servidores SMB y FTP, con escaneo de la red Wi-Fi</li>
+            <li>Buscador por categoría, orientación, fecha y tamaño</li>
+            <li>Detección de archivos duplicados</li>
+          </ul>
+          <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>SMB / FTP</li></ul>
+                  </div>
+        <div class="phones">
+          <img src="assets/fm-explorador.webp" alt="Pantalla del explorador de archivos de FileManager Studio" width="540" height="1125" loading="lazy">
+          <img src="assets/fm-buscador.webp" alt="Pantalla del buscador avanzado de FileManager Studio" width="540" height="1125" loading="lazy">
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <div class="title-row">
+            <img src="assets/mediarecovery.png" alt="" width="56" height="56">
+            <div>
+              <h3>MediaRecovery Studio</h3>
+              <p class="kind">Escritorio para Windows</p>
+            </div>
+          </div>
+          <p>Suite portable para video: recupera grabaciones ProRes interrumpidas, convierte por lotes y ordena bibliotecas grandes.</p>
+          <ul class="points">
+            <li>Reconstrucción de archivos <code>.mov</code> sin índice <code>moov</code></li>
+            <li>Conversión con aceleración por GPU (Nvidia / AMD) o CPU</li>
+            <li>Descargas web, detección de videos rotos y duplicados</li>
+          </ul>
+          <ul class="tags"><li>C#</li><li>WPF</li><li>FFmpeg</li><li>yt-dlp</li></ul>
+        </div>
+        <div class="diagram" role="img" aria-label="Esquema de recuperación: un archivo MOV sin índice se escanea cuadro por cuadro y se reconstruye">
+          <p class="d-label">grabacion.mov — sin índice</p>
+          <div class="blocks broken"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b>?</b></div>
+          <p class="d-step">↓ escaneo de cuadros ProRes <code>icpf</code></p>
+          <p class="d-step">↓ reconstrucción de átomos QuickTime</p>
+          <div class="blocks fixed"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b>moov</b></div>
+          <p class="d-label">recuperado.mov — reproducible</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="wrap">
+      <h2>Más trabajos</h2>
+      <div class="grid">
+        <article class="card">
+          <p class="kind">Web app · PWA</p>
+          <h3>Reportes urbanos</h3>
+          <p>Reportes anónimos de problemas de la ciudad con foto y GPS. Incluye panel de gestión con mapa de calor, estados y exportación a Excel, CSV y GeoJSON.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>Supabase</li><li>Leaflet</li></ul>
+        </article>
+
+        <article class="card">
+          <p class="kind">Android</p>
+          <h3>MediaRecovery Mobile</h3>
+          <p>La versión para el teléfono: descarga, compresión con aceleración por hardware, inspección y reparación de videos. En desarrollo.</p>
+          <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Media3</li></ul>
+        </article>
+
+        <article class="card">
+          <p class="kind">Streaming</p>
+          <h3>Marcador para OBS</h3>
+          <p>Overlay de fútbol en 1080p que se maneja desde el celular: goles, reloj, tiempo agregado y equipos.</p>
+          <ul class="tags"><li>Node.js</li><li>HTML</li><li>OBS</li></ul>
+        </article>
+
+        <article class="card">
+          <p class="kind">Android TV</p>
+          <h3>TV Launcher</h3>
+          <p>Launcher liviano para TV box y Android TV, pensado para andar fluido incluso con 2 GB de RAM. Favoritas, apps ocultas y orden por uso.</p>
+          <ul class="tags"><li>Kotlin</li><li>D-pad</li><li>v0.1.0</li></ul>
+                  </article>
+
+        <article class="card">
+          <p class="kind">Plataforma web</p>
+          <h3>Invitaciones digitales</h3>
+          <p>Motor de invitaciones interactivas para múltiples eventos, con grupos de invitados, confirmaciones y datos aislados por evento.</p>
+          <ul class="tags"><li>TypeScript</li><li>Next.js</li><li>Supabase</li></ul>
+        </article>
+
+        <article class="card">
+          <p class="kind">Sitio web</p>
+          <h3>Directorio de Emprendedores</h3>
+          <p>Guía online para encontrar emprendimientos, adaptada a celular y escritorio.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JSON</li></ul>
+          <a class="more" href="https://maezno.github.io/Directorio-Emprendedores/">Visitar sitio</a>
+        </article>
+
+        <article class="card">
+          <p class="kind">Escritorio para Windows</p>
+          <h3>Generador de QR</h3>
+          <p>Utilidad simple para crear códigos QR a partir de un texto y guardarlos como imagen PNG.</p>
+          <ul class="tags"><li>C#</li><li>WPF</li><li>QRCoder</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="stack" class="wrap">
+      <h2>Stack</h2>
+      <dl class="stack">
+        <div><dt>Android</dt><dd>Kotlin, Jetpack Compose, Android TV, Gradle</dd></div>
+        <div><dt>Escritorio</dt><dd>C#, .NET, WPF, FFmpeg</dd></div>
+        <div><dt>Web</dt><dd>TypeScript, React, Next.js, Node.js, Supabase, HTML y CSS</dd></div>
+      </dl>
+    </section>
+
+    <section id="contacto" class="wrap">
+      <div class="contact">
+        <h2>¿Hablamos?</h2>
+        <p>Podés encontrar mis apps publicadas en Google Play.</p>
+        <a class="btn primary" href="https://play.google.com/store/apps/developer?id=Maezno&amp;hl=es">Maezno en Google Play</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap"><p>© <span id="anio">2026</span> Maezno</p></footer>
+
+  <script>
+    document.getElementById('anio').textContent = new Date().getFullYear();
+    document.getElementById('tema').addEventListener('click', function () {
+      var root = document.documentElement;
+      var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('tema', next); } catch (e) {}
+    });
+  </script>
+</body>
+</html>
